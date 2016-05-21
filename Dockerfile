@@ -13,7 +13,7 @@ ADD src/*.py /opt/jjjPod/
 ADD uwsgi.ini /opt/jjjPod/
 
 RUN mkdir -p /etc/nginx/locations.d/timcinel/
-ADD nginx-location.conf /etc/nginx/locations.d/timcinel/
+ADD nginx-location.conf /etc/nginx/locations.d/timcinel-jjjpod/location.conf
 
 EXPOSE 3031
 CMD uwsgi uwsgi.ini
