@@ -1,0 +1,27 @@
+version: '2'
+services:
+  jjjpod:
+    image: timcinel:jjjPod
+    build: .
+  jjjpod-nginx-data:
+    image: alpine
+    volumes:
+      - "./example/nginx-vhost.conf:/etc/nginx/conf.d/nginx-vhost.conf"
+      - "./example/nginx-location.conf:/etc/nginx/locations.d/nginx-syncthing/location.conf"
+    command: /bin/true
+  nginx:
+    image: timcinel:pluggable-nginx
+    build: ./example/docker-pluggable-nginx/
+    depends_on:
+      - jjjpod
+    volumes_from:
+      - jjjpod-nginx-data
+    ports:
+      - 80:80
+  validate:
+    image: aelsabbahy/goss
+    depends_on:
+      - nginx
+    volumes:
+      - ./example/goss.yaml:/goss.yaml
+    command: goss validate --sleep 5s --retry-timeout 30s /goss.yaml

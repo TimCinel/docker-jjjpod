@@ -1,0 +1,3 @@
+[submodule "example/docker-pluggable-nginx"]
+	path = example/docker-pluggable-nginx
+	url = git@bitbucket.org:TimCinel/docker-pluggable-nginx.git

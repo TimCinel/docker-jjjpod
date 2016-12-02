@@ -1,0 +1,7 @@
+http:
+  http://nginx/jjjPod/?show=house_party:
+    status: 200
+    allow-insecure: false
+    timeout: 10000
+    body:
+      - "House Party on triple j"
