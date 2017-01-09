@@ -11,8 +11,8 @@ RUN apk --update add build-base linux-headers \
 RUN mkdir -p /opt/jjjPod
 WORKDIR /opt/jjjPod
 
-ADD src/*.py /opt/jjjPod/
-ADD uwsgi.ini /opt/jjjPod/
+COPY src/*.py /opt/jjjPod/
+COPY uwsgi.ini /opt/jjjPod/
 
 EXPOSE 3031
 CMD uwsgi uwsgi.ini
