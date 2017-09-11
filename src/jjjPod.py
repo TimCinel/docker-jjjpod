@@ -105,20 +105,20 @@ def generateFeed(show):
 
 def showFeedURL(showName):
     # Used http://www.abc.net.au/triplej/feeds/iphone/iphone-app-config.xml for URLs
-    streams = {'kingsmill'            : 'http://www.abc.net.au/triplej/media/mod/kin1.xml',
-               'home_and_hosed'       : 'http://www.abc.net.au/triplej/media/mod/hhsA.xml',
-               'safran'               : 'http://www.abc.net.au/triplej/media/mod/sns1.xml',
-               'hip_hop'              : 'http://www.abc.net.au/triplej/media/mod/hip1.xml',
-               'house_party'          : 'http://www.abc.net.au/triplej/media/mod/hpy1.xml',
+    streams = {'kingsmill'            : 'http://www.abc.net.au/triplej/media/mod/kin.xml',
+               'home_and_hosed'       : 'http://www.abc.net.au/triplej/media/mod/hhs.xml',
+               'safran'               : 'http://www.abc.net.au/triplej/media/mod/sns.xml',
+               'hip_hop'              : 'http://www.abc.net.au/triplej/media/mod/hip.xml',
+               'house_party'          : 'http://www.abc.net.au/triplej/media/mod/hpy.xml',
                'mix_up'               : [
                                             'http://www.abc.net.au/triplej/media/mod/mix1.xml',
                                             'http://www.abc.net.au/triplej/media/mod/mix2.xml',
                                             'http://www.abc.net.au/triplej/media/mod/mix3.xml',
                                             'http://www.abc.net.au/triplej/media/mod/mix4.xml'
                                         ],
-               'friday_night_shuffle' : 'http://www.abc.net.au/triplej/media/mod/fns1.xml',
-               'roots_n_all'          : 'http://www.abc.net.au/triplej/media/mod/rna1.xml',
-               'the_racket'           : 'http://www.abc.net.au/triplej/media/mod/rac1.xml',
-               'short_fast_loud'      : 'http://www.abc.net.au/triplej/media/mod/sfl1.xml',
-               'soundlab'             : 'http://www.abc.net.au/triplej/media/mod/slb1.xml'}
+               'friday_night_shuffle' : 'http://www.abc.net.au/triplej/media/mod/fns.xml',
+               'roots_n_all'          : 'http://www.abc.net.au/triplej/media/mod/rna.xml',
+               'the_racket'           : 'http://www.abc.net.au/triplej/media/mod/rac.xml',
+               'short_fast_loud'      : 'http://www.abc.net.au/triplej/media/mod/sfl.xml',
+               'soundlab'             : 'http://www.abc.net.au/triplej/media/mod/slb.xml'}
     return streams[showName]
